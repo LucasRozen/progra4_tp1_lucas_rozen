@@ -55,7 +55,15 @@ const tasks: Task[] = [
     { description: "Comprar leche", priority: "Baja", status: "pendientes" },
     { description: "Llamar al cliente", priority: "Media", status: "pendientes" },
     { description: "Hacer ejercicio", priority: "Alta", status: "completadas" },
-    { description: "Estudiar TypeScript", priority: "Media", status: "pendientes" }
+    { description: "Estudiar TypeScript", priority: "Alta", status: "pendientes" },
+    { description: "Ir a cargar la sube", priority: "Media", status: "completadas" },
+    { description: "Tarea de matemática", priority: "Media", status: "pendientes" },
+    { description: "Leer el libro", priority: "Baja", status: "pendientes" },
+    { description: "Andar en bicicleta", priority: "Media", status: "pendientes" },
+    { description: "Lavar el auto", priority: "Media", status: "pendientes" },
+    { description: "Lavar los platos", priority: "Media", status: "pendientes" },
+    { description: "Cocinar", priority: "Baja", status: "pendientes" }
+    
 ];
 
 // Agregamos las tareas al mapa
