@@ -1,4 +1,4 @@
-namespace ej3{
+namespace ej4 {
     // Definimos el tipo para las prioridades de las tareas
     type Priority = "Alta" | "Media" | "Baja";
 
@@ -77,14 +77,24 @@ namespace ej3{
         { description: "Lavar los platos", priority: "Media", status: "pendiente", assignedTo: "María" },
         { description: "Cocinar", priority: "Baja", status: "pendiente", assignedTo: "Juan" }
     ];
+    let nameRegex = new RegExp(/^[\p{L}\p{M}]+(?: [\p{L}\p{M}]+)?$/u);
+    function validateName(name: string):boolean {
+        return nameRegex.test(name);
+    }
 
     // Agregamos las tareas al mapa
     tasks.forEach(task => addTask(task));
 
-    // Mostramos las tareas pendientes asignadas a Juan
-    showTasksByStatusPriorityAndAssignee("pendiente", "Juan");
+    const name = "juan 123"
 
-    // Mostramos las tareas pendientes asignadas a María
-    showTasksByStatusPriorityAndAssignee("pendiente", "María");
-
+    if(validateName(name)){
+        // Mostramos las tareas pendientes asignadas a name
+        showTasksByStatusPriorityAndAssignee("pendiente", name);
+    }else{
+        console.log("nombre inválido")
+    }
 }
+
+
+
+
